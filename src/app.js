@@ -20,7 +20,14 @@ function generateRandomCard(){
   top.textContent = suit;
   bottom.textContent = suit;
   center.textContent = value;
+  top.classList.remove("red");
+  bottom.classList.remove("red");
   card.classList.remove("red");
+  if (suit === "♥" || suit === "♦" ){
+    top.classList.add("red");
+    bottom.classList.add("red");
+
+  }
 }
 window.onload = generateRandomCard;
 
